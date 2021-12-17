@@ -1,0 +1,23 @@
+on: [workflow_dispatch]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - uses: actions/checkout@v2
+      - uses: spcaipers-arm/VHT-AMI@use_compose_actions_vht_cli
+        with:
+            access_key_id: test
+            ami_id: test
+            aws_region: test
+            iam_role: test
+            instance_type: t2.micro
+            s3_bucket_name: test
+            secret_access_key: test
+            security_group_id: test
+            session_token: ''
+            ssh_key_name: common
+            subnet_id: ''
+            terminate_ec2_instance: ''
+            vht_in: ''
